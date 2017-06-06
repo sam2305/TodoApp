@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title style="text-align:center">Todo App</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="user" (ngSubmit)="signin()">
+    <ion-item>
+      <ion-input type="text" placeholder="Username" formControlName="username"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+    </ion-item>
+    <button ion-button block type="submit" [disabled]="!user.valid">Sign In</button>
+    <button ion-button block clear (click)="redirect()">Create Account</button> 
+  </form>
+
+</ion-content>
